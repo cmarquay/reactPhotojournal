@@ -1,6 +1,6 @@
 import React from 'react';
 import BannerImage from './components/BannerImage';
-import PhotoEntry from './components/PhotoEntry';
+import AlbumMaker from './components/AlbumMaker';
 import './App.css';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <div>
           <h1>Welcome to My Photojournal</h1>
           <h3>Christian Marquay</h3>
-          <PhotoEntry src="berlin.jpg" location="Berlin, Germany" caption="The Heart of Europe"/>
+          <AlbumMaker/>
         </div>
       </header>
     </div>
