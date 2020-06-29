@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoEntry from './PhotoEntry';
+import entries from './data/photo-entries';
 
 class AlbumMaker extends React.Component {
 
@@ -7,12 +8,12 @@ class AlbumMaker extends React.Component {
 
     return (
       <div className="flex-container">
-        <PhotoEntry src="berlin.jpg" location="Berlin, Germany" caption="Heart of Europe" />
-        <PhotoEntry src="beverly-hills.jpg" location="Beverly Hills, USA" caption="Southern California" />
-        <PhotoEntry src="maple-leaf.jpg" location="Toronto, Canada" caption="Autumn" />
-        <PhotoEntry src="wings.jpg" location="San Francisco, USA" caption="Wanderlust" />
-        <PhotoEntry src="hawaii.jpg" location="Kona, Hawaii, USA" caption="Deep Thought" />
-        <PhotoEntry src="london.jpg" location="London, UK" caption="Trafalgar Square" />
+        {
+          entries.itemlist.map((photo) => {
+            return <PhotoEntry key={photo.src} src={photo.src} location={photo.location} caption={photo.caption} />
+          }
+          )
+        }
       </div>
     )
 
